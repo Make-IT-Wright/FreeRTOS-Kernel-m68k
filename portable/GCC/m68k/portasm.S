@@ -11,7 +11,7 @@
 /* ulContextSwitchNesting is used to keep track of whether a tasks context has
  * been saved or not, e.g. to prevent double save/restore during a tick which
  * causes a yield. */
-ulContextSwitchNesting: .word
+ulContextSwitchNesting: .long
 
     .text
 
