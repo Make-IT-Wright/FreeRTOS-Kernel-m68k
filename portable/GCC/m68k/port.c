@@ -10,6 +10,12 @@
 will be set to 0 prior to the first task being started. */
 static uint32_t ulCriticalNesting = 0x9999UL;
 
+/* The stack used by interrupt service routines that cause a context switch. */
+__attribute__ ((aligned(4))) StackType_t xISRStack[ configISR_STACK_SIZE ] = { 0 };
+
+/* Points to the top of the ISR stack */
+const StackType_t * const xISRStackTop = &( xISRStack[ configISR_STACK_SIZE ] );
+
 /*-----------------------------------------------------------*/
 
 StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, TaskFunction_t pxCode, void *pvParameters )

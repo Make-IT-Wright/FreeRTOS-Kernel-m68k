@@ -1,6 +1,7 @@
     .extern vPortIncrementTick
     .extern vTaskSwitchContext
     .extern pxCurrentTCB
+    .extern xISRStackTop
 
     .global vPortStartFirstTask
     .global TRAP14
@@ -28,6 +29,9 @@ ulContextSwitchNesting: .long
     movem.l %d0-%fp, -(%sp)
     move.l  pxCurrentTCB, %a0
     move.l  %sp, (%a0)
+
+    /* Set SP to ISR stack */
+    movea.l xISRStackTop, %sp
 
 0:
 
