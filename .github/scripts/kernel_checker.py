@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #/*
-# * FreeRTOS Kernel <DEVELOPMENT BRANCH>
+# * FreeRTOS Kernel V10.4.5
 # * Copyright (C) 2021 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
 # *
 # * SPDX-License-Identifier: MIT
@@ -60,7 +60,8 @@ KERNEL_IGNORED_EXTENSIONS = [
     '.png',
     '.bat',
     '.sh',
-    '.txt'
+    '.txt',
+    '.cmake'
 ]
 
 KERNEL_ASM_EXTENSIONS = [
@@ -98,7 +99,7 @@ KERNEL_THIRD_PARTY_PATTERNS = [
 
 KERNEL_HEADER = [
     '/*\n',
-    ' * FreeRTOS Kernel <DEVELOPMENT BRANCH>\n',
+    ' * FreeRTOS Kernel V10.4.5\n',
     ' * Copyright (C) 2021 Amazon.com, Inc. or its affiliates.  All Rights Reserved.\n',
     ' *\n',
     ' * SPDX-License-Identifier: MIT\n',
